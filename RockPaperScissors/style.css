@@ -1,0 +1,210 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: "Barlow Condensed" , sans-serif;
+}
+
+.wrapper
+{
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(
+        134.34% 134.34% at 50% 0%, 
+        #1f3757 1%, #131537 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scoreboard
+{
+    width: 700px;
+    border: 1px solid white;
+    border-radius: 15px;
+    margin-top: 50px;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title
+{
+    margin-left: 30px;
+}
+
+.score
+{
+    width: 150px;
+    height: 114px;
+    background-color: white;
+    border-radius: 8px;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.score h1
+{
+    color: #565468;
+    font-size: 56px;
+}
+
+.score p
+{
+    color: #2a45c2;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 2.5px;
+}
+
+.hands
+{
+    background-image: url("Githubassets/triangle.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 476px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.scissors
+{
+    margin-left: 20px;
+}
+
+.paper
+{
+    margin-right: 20px;
+}
+
+.hands .hand
+{
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.hands .hand:hover
+{
+    transform: translate3d(0px, -8px, 0px);
+}
+
+.contest
+{
+    width: 900px;
+    display: none;
+    margin-top: 50px;
+}
+
+.contest img
+{
+    width: 275px;
+    height: 275px;
+}
+
+
+/*the symbol '>' is to target only the divs below and not the divs inside the div without the symbol, the code will target all the divs*/
+/*flex 1 makes all the divs exactly the same witdth*/
+.contest > div
+{
+    flex: 1;
+}
+
+.contest h1
+{
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+/*if "align items center" does not work try out "justify items center" also the later works with display flex. 
+although align items work better for texts and justify works for other elements.
+Justify items makes the content go to the center of the div*/
+.handImageContainer
+{
+    display: flex;
+    justify-content: center;
+}
+
+.referee
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.referee h1
+{
+    font-size: 45px;
+}
+
+/* instead of specifying the direction of your padding ie, padding top padding left etc, padding 2px 3px
+means padding 2px for both top and bottom and 3px for left and right.*/
+.newgame
+{
+    background-color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: hsl(229, 25%, 31%);
+    transition: 0.15s;
+}
+
+/* transition is to make the button less jittery ie make the transition smoother;
+by adding time for the effect to take place.*/
+.newgame:hover
+{
+    background-color: bisque;
+    transform: translate3d(0px, -2px, 0px);
+}
+
+/*@media (max-width: 575.98px)
+{
+    .scoreboard
+    {
+        width: 350px;
+        border: 1px solid white;
+        border-radius: 15px;
+        margin-top: 50px;
+        height: 150px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .left1
+    {
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    .right1
+    {
+        display: none;
+    }
+
+    .clients
+    {
+        flex-direction: column;
+    }
+
+    .client
+    {
+        margin-top: 50px;
+    }
+}
+*/
